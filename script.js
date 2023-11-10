@@ -306,3 +306,4 @@ function truncate(str, n) {
 }
 
 updateTask();
+showMealList();
