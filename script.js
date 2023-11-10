@@ -117,7 +117,7 @@ async function showMealList() {
 flexBox.onscroll = function () {
 
    console.log('called function onscroll')
-    if (flexBox.scrollTop > searchbar.offsetTop) {
+    if (flexBox.scrollTop > (searchbar.offsetTop-document.getElementById('navbar').offsetHeight)) {
         searchbar.classList.add("fixed");
 
     } else {
