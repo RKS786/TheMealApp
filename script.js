@@ -66,7 +66,7 @@ async function showMealList() {
 
     console.log("in the show meal list")
     const list = JSON.parse(localStorage.getItem(favMealsDB));
-    const inputValue = document.getElementById("search-input").value;
+    const inputValue = document.getElementById("search-input").value || 'pancake';
 
     const url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
@@ -128,7 +128,7 @@ flexBox.onscroll = function () {
 
 // Function to add or remove a meal from the favorite list
 function addRemoveToFavList(id) {
-    
+    showMealList();
     const detailsPageLikeBtn = document.getElementById('like-button');
     let db = JSON.parse(localStorage.getItem(favMealsDB));
     let ifExist = false;
